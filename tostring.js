@@ -1,5 +1,5 @@
 
-var js_arr = [];
+var js_arr = "[";
 
 
 function tostr_init(){
@@ -7,8 +7,9 @@ function tostr_init(){
 	vls = vls.trim();
 	var vls_arr = vls.split(";");
 	vls_arr.forEach(printBr);
-	$('#res').val(JSON.stringify(js_arr));
-	console.log(JSON.stringify(js_arr));
+	 js_arr += "]";
+	$('#res').val(js_arr);
+	console.log(js_arr);
 	return false;
 	
 }
@@ -34,21 +35,22 @@ function printBr(element, index, array) {
 	var new_str = clean_str(element)
 	console.log(new_str);
 	if(new_str !=''){
-		var jsonData = {};
-		js_arr.push(jsonData[new_str] = '+'+new_str+'+');
+		js_arr += '{'+new_str+' : \"+'+new_str+'+\"}';
+		
 	}
 	
 }
 
 function clean_str(str){
 	var new_str = str.trim();
-	if(new_str.indexOf("String") > -1){
-	new_str = new_str.replace("String","");
-	}else if(new_str.indexOf("int") > -1){
-		new_str = new_str.replace("int","");
+	var rem = ["String","int","double","float","boolean"];
+	for(i=0;i<=rem.length;i++){
+		if(new_str.indexOf(rem[i]) > -1){
+			new_str = new_str.replace(rem[i],"");
+			return new_str;
+		}
 	}
 	new_str = new_str.trim();
 	
 	return new_str;
 }
-
