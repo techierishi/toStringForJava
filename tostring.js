@@ -3,6 +3,7 @@ var js_arr = "";
 
 
 function tostr_init(){
+	js_arr = "";
 	var vls = $('#vars').val();
 	vls = vls.trim();
 	var vls_arr = vls.split(";");
