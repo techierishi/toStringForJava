@@ -1,11 +1,12 @@
 
-var js_arr = "[";
+var js_arr = "";
 
 
 function tostr_init(){
 	var vls = $('#vars').val();
 	vls = vls.trim();
 	var vls_arr = vls.split(";");
+	js_arr += "["
 	vls_arr.forEach(printBr);
 	 js_arr += "]";
 	$('#res').val(js_arr);
