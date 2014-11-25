@@ -1,4 +1,3 @@
-
 var js_arr = "";
 
 
@@ -11,7 +10,7 @@ function tostr_init(){
 	vls_arr.forEach(printBr);
 	 js_arr += "]";
 	$('#res').val(js_arr);
-	console.log(js_arr);
+    //console.log(js_arr);
 	return false;
 	
 }
@@ -33,11 +32,18 @@ if (!Array.prototype.forEach)
 }
 
 function printBr(element, index, array) {
-	
+    var cmma = "";
+    if((array.length-1)==index){
+        cmma = "";
+    }else{
+        cmma = ",";
+    }
+    
+    console.log((array.length-1)+" "+index);
 	var new_str = clean_str(element)
-	console.log(new_str);
+    //console.log(new_str);
 	if(new_str !=''){
-		js_arr += '{'+new_str+' : \"+'+new_str+'+\"}';
+		js_arr += '{'+new_str+' : \"+'+new_str+'+\"}'+cmma;
 		
 	}
 	
