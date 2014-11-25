@@ -19,8 +19,8 @@ This javascript will convert following variable declaration >>>
  
  To following string which can easily placed insite an empty string in java to string function return value >>>>
  
-[{ expence_type : "+ expence_type+"}{ expense_category_val : "+ expense_category_val+"}{ expense_amount_val : "+ expense_amount_val+"}{ expense_date_val : "+ expense_date_val+"}{ expense_note_val : "+ expense_note_val+"}{ attach_photo_name : "+ attach_photo_name+"}]
+[{\" expence_type\" : \""+ expence_type+"\"},{\" expense_category_val\" : \""+ expense_category_val+"\"},{\" expense_amount_val\" : \""+ expense_amount_val+"\"},{\" expense_date_val\" : \""+ expense_date_val+"\"},{\" expense_note_val\" : \""+ expense_note_val+"\"},{\" attach_photo_name\" : \""+ attach_photo_name+"\"}]
 
 Example ::
 
- String str = "[{ expence_type : "+ expence_type+"}{ expense_category_val : "+ expense_category_val+"}{ expense_amount_val : "+ expense_amount_val+"}{ expense_date_val : "+ expense_date_val+"}{ expense_note_val : "+ expense_note_val+"}{ attach_photo_name : "+ attach_photo_name+"}]";
+ String str = "[{\" expence_type\" : \""+ expence_type+"\"},{\" expense_category_val\" : \""+ expense_category_val+"\"},{\" expense_amount_val\" : \""+ expense_amount_val+"\"},{\" expense_date_val\" : \""+ expense_date_val+"\"},{\" expense_note_val\" : \""+ expense_note_val+"\"},{\" attach_photo_name\" : \""+ attach_photo_name+"\"}]";
