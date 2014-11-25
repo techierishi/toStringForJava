@@ -32,21 +32,17 @@ if (!Array.prototype.forEach)
 }
 
 function printBr(element, index, array) {
-    var cmma = "";
-    if((array.length-1)==index){
-        cmma = "";
-    }else{
-        cmma = ",";
-    }
-    
-    console.log((array.length-1)+" "+index);
-	var new_str = clean_str(element)
-    //console.log(new_str);
+	var new_str = clean_str(element);
+	console.log(parseInt((array.length-1))+"  : "+parseInt(index));
+    var bool = parseInt((array.length-2))==parseInt(index);
+    console.log(bool);
 	if(new_str !=''){
-		js_arr += '{'+new_str+' : \"+'+new_str+'+\"}'+cmma;
-		
-	}
-	
+		 if(bool){
+			js_arr += '{\\"'+new_str+'\\" : \\"\"+'+new_str+'+\"\\"}';
+		}else{
+			js_arr += '{\\"'+new_str+'\\" : \\"\"+'+new_str+'+\"\\"},';
+		}		
+	}	
 }
 
 function clean_str(str){
